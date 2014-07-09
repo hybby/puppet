@@ -25,9 +25,10 @@ puppet configuration notes:
   *   puppet master --verbose --no-daemonize (ctrl + c when you see 'Starting Puppet master version.*').  think of this as a syntax check of sorts, i suppose?  it does a bunch of inital cert generating, too.
   
 
-more master related directives for /etc/puppet/puppet.conf:
------------------------------------------------------------
+more master related directives
+------------------------------
 
+chuck in /etc/puppet/puppet.conf:
   *   create a [master] section
   *   move the 'dns_alt_names' directive down to to [master]
   *   environmentpath = $confdir/environments
@@ -55,8 +56,8 @@ configure the production environment:
   *   copy the contents of install_files/puppetmaster.conf to /etc/httpd/conf.d/
 
 
-sort it aht mate.  httpd replaces puppetmaster service:
--------------------------------------------------------
+sort it aht.  httpd replaces puppetmaster service:
+--------------------------------------------------
 
 disables:
   *   chkconfig puppetmaster off
@@ -77,8 +78,8 @@ fucking whew.  is that it?  i hope so.
   *   puppet agent test - should return all green and compile catalogues etc.
 
 
-because why not
-===============
+because why not.
+================
 
 
 
