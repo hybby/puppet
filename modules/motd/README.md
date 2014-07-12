@@ -46,5 +46,5 @@ do whatever you like.  this module is pretty shit anyways.
 
 module history / changelog:
 ---------------------------
-09/07/14 - started work on this module.  what a latecomer to the puppet party.
+09/07/14 - started work on this module.  what a latecomer to the puppet party.  
 12/07/14 - finished the module, for all it does.  getting the agent to pick it up took the longest
