@@ -1,61 +1,50 @@
-# motd/README.md
+motd - message of the day
+=========================
 
-#### Table of Contents
+puppet module to set the /etc/motd and 
+/etc/issue.net files to what i want.
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with motd](#setup)
-    * [What motd affects](#what-motd-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with motd](#beginning-with-motd)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
 
-## Overview
-
-Sets the /etc/motd and /etc/issue.net files appropriately.
-
-## Module Description
-
-Pretty much just makes sure this host has the correct files in
-place for /etc/issue.net and /etc/motd.  The files have been 
+description
+-----------
+pretty much just makes sure this host has the correct files in
+place for /etc/issue.net and /etc/motd.  the files have been 
 included in the ${modulebase}/files/default dir, with the 
 thought that there might be per-host configuration later on.
 
-## Setup
+today was the day that i learned puppet:/// uris automatically
+fire in a 'files' directory for any modules you mention.  
 
-### What motd affects
+seriously.  why?
 
+
+
+what this module affects:
+-------------------------
 * /etc/motd
 * /etc/issue.net
 
-### Setup Requirements **OPTIONAL**
 
-Nothing special.
+getting started with this module:
+---------------------------------
+pretty simple module.  just plonk it down
 
-### Beginning with motd
 
-Just use it.
+any special usage info?
+-----------------------
+no
 
-## Usage
+any limitations i should know about?
+------------------------------------
+yeah, it is redhat only at the moment.
 
-Not right now.
 
-## Reference
-
-Not right now.
-
-## Limitations
-
-Redhat only at the moment.
-
-## Development
-
+development notes and reuse:
+----------------------------
 Do whatever you like.  This module is pretty shit anyways.
 
-## Release Notes/Contributors/Etc **Optional**
 
-Started work on this module on Saturday 12th July 2014.
-What a latecomer to the Puppet party.
+module history / changelog:
+---------------------------
+09/07/14 - started work on this module.  what a latecomer to the puppet party.
+12/07/14 - finished the module, for all it does.  getting the agent to pick it up took the longest
