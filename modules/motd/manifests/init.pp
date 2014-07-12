@@ -1,3 +1,4 @@
+# motd/manifests/init.pp
 # == Class: motd
 #
 # Full description of class motd here.
@@ -37,5 +38,6 @@
 #
 class motd {
 
+  include motd::params, motd::config
 
 }
