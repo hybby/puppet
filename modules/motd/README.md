@@ -41,7 +41,7 @@ yeah, it is redhat only at the moment.
 
 development notes and reuse:
 ----------------------------
-Do whatever you like.  This module is pretty shit anyways.
+do whatever you like.  this module is pretty shit anyways.
 
 
 module history / changelog:
