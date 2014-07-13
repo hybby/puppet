@@ -2,6 +2,6 @@
 
 class firewall {
 
-  include firewall::params, firewall::config
+  include firewall::params, firewall::service
 
 }
