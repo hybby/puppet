@@ -1,0 +1,17 @@
+{
+  "name": "firewall",
+  "version": "0.1.0",
+  "author": "hybby",
+  "summary": "Configures the firewall.  Or rather, unconfigures it.",
+  "license": "Apache 2.0",
+  "source": "http://www.github.com/hybby",
+  "issues_url": "https://www.github.com/hybby/issues",
+  "project_page": "https://www.github.com/hybby",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
