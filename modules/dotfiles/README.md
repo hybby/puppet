@@ -8,7 +8,7 @@ also makes sure my user is there, etc.
 
 description
 -----------
-`.profile`, `.bashrc`, *etc*... these are all things that i am 
+`.profile`, `.bashrc`, *etc*... these are all things that i am  
 interested in remaining the same for my lovely user.
 
 
@@ -20,27 +20,27 @@ what this module affects:
 variables:
 ----------
 
-  `$user`  
+  `$dotfiles::params::user`  
   the name of the user that is being configured.  (default: `drew`)  
 
-  `$group` 
+  `$dotfiles::params::group` 
   the group membership of `$user`.  (default: `users`)  
 
-  `$homedir` 
-  the home directory of `$user`.
-  for non-root users, this is set to `/home/${user}`
+  `$dotfiles::params::homedir` 
+  the home directory of `$user`.  
+  for non-root users, this is set to `/home/${user}`  
   for the root user, this is set to `/root`.  
 
-  `$uid` 
+  `$dotfiles::params::uid` 
   the uid of `$user`.  for `drew` this is 500.  for `root`, 0.   
 
-  `$bashrc` 
+  `$dotfiles::params::bashrc` 
   the default `.bashrc` file for `$user`.  placed in `$homedir` by default.   
 
-  `$bash_profile` 
+  `$dotfiles::params::bash_profile` 
   the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.   
 
-  `$vimrc` 
+  `$dotfiles::params::vimrc` 
    the default `.vimrc` file for `$user`.  placed in `$homedir` by default.    
 
 
