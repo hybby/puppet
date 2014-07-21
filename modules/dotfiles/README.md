@@ -23,24 +23,24 @@ variables:
   `$dotfiles::params::user`  
   the name of the user that is being configured.  (default: `drew`)  
 
-  `$dotfiles::params::group` 
+  `$dotfiles::params::group`  
   the group membership of `$user`.  (default: `users`)  
 
-  `$dotfiles::params::homedir` 
+  `$dotfiles::params::homedir`  
   the home directory of `$user`.  
   for non-root users, this is set to `/home/${user}`  
   for the root user, this is set to `/root`.  
 
-  `$dotfiles::params::uid` 
+  `$dotfiles::params::uid`  
   the uid of `$user`.  for `drew` this is 500.  for `root`, 0.   
 
-  `$dotfiles::params::bashrc` 
+  `$dotfiles::params::bashrc`  
   the default `.bashrc` file for `$user`.  placed in `$homedir` by default.   
 
-  `$dotfiles::params::bash_profile` 
+  `$dotfiles::params::bash_profile`  
   the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.   
 
-  `$dotfiles::params::vimrc` 
+  `$dotfiles::params::vimrc`  
    the default `.vimrc` file for `$user`.  placed in `$homedir` by default.    
 
 
