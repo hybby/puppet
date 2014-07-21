@@ -10,7 +10,7 @@ class selinux::config (
       }
     file { $selinux::params::selinux_link :
       ensure => link,
-      target => "$selinux_config"
+      target => "$selinux::params::selinux_config"
       }
     }
 

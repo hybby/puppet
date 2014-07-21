@@ -15,7 +15,17 @@ in the future, i can make things more complicated if i like.
 
 what this module affects:
 -------------------------
-* selinux
+* the `selinux` function
+
+
+variables:
+----------
+  `$selinux::params::selinux_config`  
+  the path of the selinux config file.  on redhat, this is `/etc/selinux/config`
+
+  `$selinux::params::selinux_link`  
+  on redhat, there is a symlink to the selinux configuratin file at  
+  `/etc/sysconfig/selinux`
 
 
 getting started with this module:
