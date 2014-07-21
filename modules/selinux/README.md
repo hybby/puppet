@@ -24,8 +24,7 @@ variables:
   the path of the selinux config file.  on redhat, this is `/etc/selinux/config`
 
   `$selinux::params::selinux_link`  
-  on redhat, there is a symlink to the selinux configuratin file at  
-  `/etc/sysconfig/selinux`
+  on redhat, there is a symlink to the selinux configuration file at `/etc/sysconfig/selinux`  
 
 
 getting started with this module:
