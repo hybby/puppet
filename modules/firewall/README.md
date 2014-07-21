@@ -18,6 +18,13 @@ what this module affects:
   * the `iptables` service
 
 
+variables:
+----------
+
+  `$firewall::params::firewall`  
+  the name of the firewall service.  for redhat, this is `iptables`    
+
+
 getting started with this module:
 ---------------------------------
 pretty simple module.  just plonk it down
