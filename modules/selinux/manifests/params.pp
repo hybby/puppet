@@ -6,7 +6,7 @@ class selinux::params {
       $selinux_link   = '/etc/sysconfig/selinux'
     }
   default: {
-    fail("sorry, the ${module_name} module is not supported \
+    fail("sorry, the selinux module is not supported \
           on ${::osfamily} systems yet :(")
     }
   }
