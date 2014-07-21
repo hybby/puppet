@@ -14,7 +14,7 @@ interested in remaining the same for my lovely user.
 
 what this module affects:
 -------------------------
-by default, the following files for the 'drew' user:
+  * by default, the following files for the 'drew' user:
 
 
 variables:
