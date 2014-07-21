@@ -18,11 +18,20 @@ fire in a `files` directory for any modules you mention.
 seriously.  why?
 
 
-
 what this module affects:
 -------------------------
 * `/etc/motd`
 * `/etc/issue.net`
+
+
+variables:
+==========
+
+  `$motd::params::motd`  
+  the path of the `motd` file.  (default: `/etc/motd/`)
+
+  `$motd::params::issue.net`  
+  the path of the `issue.net` file.  (default: `/etc/issue.net`).
 
 
 getting started with this module:
