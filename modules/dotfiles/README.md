@@ -54,7 +54,7 @@ any special usage info?
 in the future, it would be nice if we could override the
 `$user` variable to be an array or sommat.  just a thought.
 
-i do not think htis is possible though.  because singletons.
+i do not think this is possible though.  because singletons.
 
 any limitations i should know about?
 ------------------------------------
