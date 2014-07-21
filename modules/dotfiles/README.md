@@ -27,7 +27,7 @@ variables:
   the group membership of `$user`.  (default: `users`)  
 
   `$dotfiles::params::homedir`  
-  the home directory of `$user`.  
+  the home directory of `$user`   
   for non-root users, this is set to `/home/${user}`  
   for the root user, this is set to `/root`.  
 
