@@ -8,8 +8,8 @@ also makes sure my user is there, etc.
 
 description
 -----------
-.profile, .bashrc, etc... these are all things that i am
-interested in remaining the same.
+`.profile`, `.bashrc`, *etc*... these are all things that i am 
+interested in remaining the same for my lovely user.
 
 
 what this module affects:
@@ -20,28 +20,28 @@ by default, the following files for the 'drew' user:
 variables:
 ----------
 
-  `$user` 
+  `$user`  
   the name of the user that is being configured.  (default: `drew`)  
 
-  `$group`
+  `$group` 
   the group membership of `$user`.  (default: `users`)  
 
-  `$homedir`
+  `$homedir` 
   the home directory of `$user`.
   for non-root users, this is set to `/home/${user}`
   for the root user, this is set to `/root`.  
 
-  `$uid`
-  the uid of `$user`  
+  `$uid` 
+  the uid of `$user`.  for `drew` this is 500.  for `root`, 0.   
 
-  `$bashrc`
-  the default `.bashrc` file for `$user`.  placed in `$homedir` by default.  
+  `$bashrc` 
+  the default `.bashrc` file for `$user`.  placed in `$homedir` by default.   
 
-  `$bash_profile`
-  the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.  
+  `$bash_profile` 
+  the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.   
 
-  `$vimrc`
-   the default `.vimrc` file for `$user`.  placed in `$homedir` by default.   
+  `$vimrc` 
+   the default `.vimrc` file for `$user`.  placed in `$homedir` by default.    
 
 
 getting started with this module:
