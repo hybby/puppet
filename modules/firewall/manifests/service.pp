@@ -1,8 +1,7 @@
 # firewall/manifests/service.pp
 class firewall::service (
-  $firewall = $firewall::params::firewall
   ) {
-    service { $firewall :
+    service { $firewall::params::firewall :
       ensure => stopped,
       enable => false,
     }

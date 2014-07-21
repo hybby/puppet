@@ -1,12 +1,12 @@
 firewall - firewall config 
 ==========================
 
-puppet module to turn off iptables and make sure it stays off.
+puppet module to turn off `iptables` and make sure it stays off.
 
 
 description
 -----------
-since i am not particularly interested in iptables running on 
+since i am not particularly interested in `iptables` running on 
 any of my hosts at the moment, i have created this module to
 make sure it stays off.  
 
@@ -15,7 +15,7 @@ in the future, i can make things more complicated if i like.
 
 what this module affects:
 -------------------------
-* the 'iptables' service
+  * the `iptables` service
 
 
 getting started with this module:

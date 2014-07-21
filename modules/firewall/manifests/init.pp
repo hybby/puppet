@@ -1,7 +1,5 @@
 # firewall/manifests/init.pp
-
-class firewall {
-
+class firewall (
+  ) {
   include firewall::params, firewall::service
-
 }
