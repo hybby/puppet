@@ -72,11 +72,33 @@ enables:
   *   `service puppet start`
 
 
-fucking whew.  is that it?  i hope so.
---------------------------------------
+is that it?
+-----------
 
   *   `https://yalson:8140` should actually be listening, although i do not think you will be able to get anything useful out of it.
   *   `puppet agent test` - should return all green and compile catalogues etc.
+
+
+oh and here is some other fun stuff i did. 
+------------------------------------------
+
+puppet *hates* when you use symlinks with environments.
+well, not hate exactly.  more like *completely ignores* them.
+
+i made my `$confdir/environments/production/modules` and
+`$confdir/environments/production/manifests` directories
+both symlinks to somewhere in my homedir and spent fucking
+hours trying to figure out what happened.  i suspect it was
+the manifests dir which hated this, secretly.
+
+i solved this by cloning my repo into `$confdir` instead.
+
+```bash
+cd /etc/puppet/environments
+git clone git@github.com:hybby/puppet.git
+mv puppet production
+puppet agent --test --noop
+```
 
 
 because why not.
