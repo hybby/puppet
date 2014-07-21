@@ -12,4 +12,5 @@ set -o vi
 umask 0027	
 
 # aliases 
-alias mplayer='mplayer -vo caca'
+alias 'mplayer'='mplayer -vo caca'
+alias 'puppet-lint'='puppet-lint --no-80chars-check'

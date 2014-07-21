@@ -1,54 +1,43 @@
 # dotfiles/manifests/config.pp
-class dotfiles::config (
-  $user = $dotfiles::params::user,
-  $group = $dotfiles::params::group,
-  $homedir = $dotfiles::params::homedir,
-  $bashrc = $dotfiles::params::bashrc,
-  $bash_profile = $dotfiles::params::bash_profile,
-  $uid = $dotfiles::params::uid,
-  $vimrc = $dotfiles::params::vimrc
-  ) {
-    user { $user :
+class dotfiles::config
+  {
+    user { $dotfiles::params::user :
       ensure   => present,
       password => '$6$Qy6IKY/viDT3c.mT$NxklJp7Na0ja53ED2HuYOL9kwYs4qVaVKu7YEciuYhfY9hQM81UrOeLZjJq6a4xmmr8.5hfykOAQo1vyaxHNW.',
-      groups   => $group,
+      groups   => $dotfiles::params::group,
       shell    => '/bin/bash',
-      home     => $homedir,
-      uid      => $uid,
+      home     => $dotfiles::params::homedir,
+      uid      => $dotfiles::params::uid,
     }
-
-    file { $homedir :
+    file { $dotfiles::params::homedir :
       ensure  => directory,
-      owner   => $user,
-      group   => $group,
+      owner   => $dotfiles::params::user,
+      group   => $dotfiles::params::group,
       mode    => '0750',
-      require => User[$user],
+      require => User[$dotfiles::params::user],
     }
-
-    file { $bashrc :
+    file { $dotfiles::params::bashrc :
       ensure  => file,
-      source  => "puppet:///modules/dotfiles/${user}/bashrc",
-      owner   => $user,
-      group   => $group,
-      mode    => '0640',
-      require => File[$homedir],
+      source  => "puppet:///modules/dotfiles/${dotfiles::params::user}/bashrc",
+      owner   => $dotfiles::params::user,
+      group   => $dotfiles::params::group,
+      mode    => '0750',
+      require => File[$dotfiles::params::homedir],
     }
-
-    file { $bash_profile :
+    file { $dotfiles::params::bash_profile :
       ensure  => file,
-      source  => "puppet:///modules/dotfiles/${user}/bash_profile",
-      owner   => $user,
-      group   => $group,
-      mode    => '0640',
-      require => File[$homedir],
+      source  => "puppet:///modules/dotfiles/${dotfiles::params::user}/bash_profile",
+      owner   => $dotfiles::params::user,
+      group   => $dotfiles::params::group,
+      mode    => '0750',
+      require => File[$dotfiles::params::homedir],
     }
-
-    file { $vimrc :
+    file { $dotfiles::params::vimrc :
       ensure  => file,
-      source  => "puppet:///modules/dotfiles/${user}/vimrc",
-      owner   => $user,
-      group   => $group,
+      source  => "puppet:///modules/dotfiles/${dotfiles::params::user}/vimrc",
+      owner   => $dotfiles::params::user,
+      group   => $dotfiles::params::group,
       mode    => '0640',
-      require => File[$homedir],
+      require => File[$dotfiles::params::homedir],
     }
   }

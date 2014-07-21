@@ -15,7 +15,34 @@ interested in remaining the same.
 what this module affects:
 -------------------------
 by default, the following files for the 'drew' user:
-  
+
+
+variables:
+----------
+
+  `$user` 
+  the name of the user that is being configured.  (default: `drew`)  
+
+  `$group`
+  the group membership of `$user`.  (default: `users`)  
+
+  `$homedir`
+  the home directory of `$user`.
+  for non-root users, this is set to `/home/${user}`
+  for the root user, this is set to `/root`.  
+
+  `$uid`
+  the uid of `$user`  
+
+  `$bashrc`
+  the default `.bashrc` file for `$user`.  placed in `$homedir` by default.  
+
+  `$bash_profile`
+  the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.  
+
+  `$vimrc`
+   the default `.vimrc` file for `$user`.  placed in `$homedir` by default.   
+
 
 getting started with this module:
 ---------------------------------
