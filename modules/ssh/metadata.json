@@ -1,0 +1,17 @@
+{
+  "name": "drew-ssh",
+  "version": "0.1.0",
+  "author": "drew",
+  "summary": "configures ssh (client and server hopefully)",
+  "license": "Apache 2.0",
+  "source": "https://www.github.com/hybby",
+  "project_page": "https://www.github.com/hybby",
+  "issues_url": "https://www.github.com/hybby/issues",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
