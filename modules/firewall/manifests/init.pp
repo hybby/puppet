@@ -1,5 +1,5 @@
 # firewall/manifests/init.pp
 class firewall (
-  ) {
-  include firewall::params, firewall::service
+  ) inherits firewall::params {
+  include firewall::service
   }

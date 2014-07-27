@@ -1,5 +1,5 @@
 # dotfiles/manifests/params.pp
-class dotfiles::params 
+class dotfiles::params
 {
   # i'm the default user, obv.
   $user         = 'drew'

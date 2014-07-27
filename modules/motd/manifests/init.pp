@@ -1,4 +1,5 @@
 # motd/manifests/init.pp
-class motd {
-  include motd::params, motd::config
+class motd (
+  ) inherits motd::params {
+  include motd::config
   }

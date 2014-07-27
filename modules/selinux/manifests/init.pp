@@ -1,4 +1,5 @@
 # selinux/manifests/init.pp
-class selinux {
-  include selinux::params, selinux::config
+class selinux (
+  ) inherits selinux::params {
+  include selinux::config
   }
