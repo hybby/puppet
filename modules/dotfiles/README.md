@@ -50,6 +50,7 @@ pretty simple module.  just plonk it down
 
 you can override the defaults like this:
 
+```puppet
   class { 'dotfiles':
     user         => 'root',
     group        => 'root',
@@ -59,6 +60,7 @@ you can override the defaults like this:
     bash_profile => '/root/.bash_profile',
     vimrc        => '/root/.vimrc',
   }
+```
 
 i have special files for root, so that is why i did this.
 
