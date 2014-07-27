@@ -26,24 +26,22 @@ variables:
   the name of the user that is being configured.  (default: `drew`)  
 
   `$dotfiles::params::group`  
-  the group membership of `$user`.  (default: `users`)  
+  the group membership of `$user`  (default: `users`)  
 
   `$dotfiles::params::homedir`  
-  the home directory of `$user`   
-  for non-root users, this is set to `/home/${user}`  
-  for the root user, this is set to `/root`.  
+  the home directory of `$user`  (default: `/home/drew`)  
 
   `$dotfiles::params::uid`  
-  the uid of `$user`.  for `drew` this is 500.  for `root`, 0.   
+  the uid of `$user`  (default: `500`)    
 
   `$dotfiles::params::bashrc`  
-  the default `.bashrc` file for `$user`.  placed in `$homedir` by default.   
+  the default `.bashrc` file for `$user`.  (default: `/home/drew/.bashrc`)
 
   `$dotfiles::params::bash_profile`  
-  the default `.bash_profile` file for `$user`.  placed in `$homedir` by default.   
+  the default `.bash_profile` file for `$user`.  (default: `/home/drew/.bash_profile`)   
 
   `$dotfiles::params::vimrc`  
-   the default `.vimrc` file for `$user`.  placed in `$homedir` by default.    
+   the default `.vimrc` file for `$user`.  (default: `/home/drew/.vimrc`)    
 
 
 getting started with this module:
@@ -90,3 +88,4 @@ do whatever you like.  this module is pretty shit anyways.
 module history / changelog:
 ---------------------------
 20/07/14 - started work on this module.  
+27/07/14 - fixing the params.
