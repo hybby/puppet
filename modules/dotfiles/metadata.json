@@ -1,6 +1,6 @@
 {
   "name": "hybby-dotfiles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "hybby",
   "summary": "this module replaces my dotfiles to how i like 'em.",
   "license": "Apache 2.0",
@@ -9,7 +9,7 @@
   "project_page": "https://www.github.com/hybby",
   "dependencies": [
     {
-      "version_range": ">= 1.0.0",
+      "version_range": ">= 1.0.1",
       "name": "puppetlabs-stdlib"
     }
   ]

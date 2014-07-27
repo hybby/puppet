@@ -15,7 +15,9 @@ interested in remaining the same for my lovely user.
 what this module affects:
 -------------------------
   * by default, the following files for the `drew` user:
-
+    * `~/.bashrc`
+    * `~/.bash_profile`
+    * `~/.vimrc`
 
 variables:
 ----------
@@ -48,13 +50,32 @@ getting started with this module:
 ---------------------------------
 pretty simple module.  just plonk it down
 
+you can override the defaults like this:
+
+  class { 'dotfiles':
+    user         => 'root',
+    group        => 'root',
+    homedir      => '/root',
+    uid          => '0',
+    bashrc       => '/root/.bashrc',
+    bash_profile => '/root/.bash_profile',
+    vimrc        => '/root/.vimrc',
+  }
+
+i have special files for root, so that is why i did this.
+
+pretty annoying that i cannot override the `user` variable and then
+use that later in params.pp.  i think this is because of the order 
+that overriden parameters and `params.pp` are parsed.
+
+oh yes.  files are kept in the `files/${user}` dir, so make sure
+to add that if you have a special overriden user.
+
 
 any special usage info?
 -----------------------
-in the future, it would be nice if we could override the
-`$user` variable to be an array or sommat.  just a thought.
+just what i said up there really
 
-i do not think this is possible though.  because singletons.
 
 any limitations i should know about?
 ------------------------------------
