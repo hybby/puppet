@@ -5,7 +5,7 @@ class firewall::params {
       $firewall = 'iptables'
     }
   default: {
-    fail("sorry, the firewall module is not supported \
+    fail("sorry, the ${module_name} module is not supported \
           on ${::osfamily} systems yet :(")
     }
   }
