@@ -1,0 +1,36 @@
+#	sshd_config - this file is managed by Puppet
+#	============================================
+
+# main configurable options
+# -------------------------
+Protocol 2
+<% scope['sshd::ports'].each do |port| -%>
+Port <%= port %>
+<% end -%>
+ListenAddress <%= scope['sshd::listen_on'] %>
+PermitRootLogin <%= scope['sshd::permitrootlogin'] %>
+AllowUsers <%= scope['sshd::users'].join(' ') %>
+X11Forwarding <%= scope['sshd::x11_forwarding'] %>
+PrintMotd <%= scope['sshd::printmotd'] %>
+Banner <%= scope['sshd::bannerfile'] %>
+PrintLastLog <%= scope['sshd::printlastlog'] %> 
+#LoginGraceTime 2m
+#MaxAuthTries 6
+#MaxSessions 10
+
+# misc defaults
+# -------------
+SyslogFacility AUTHPRIV
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+UsePAM yes
+
+# accept locale-related environment variables
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+
+# override default of no subsystems
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
