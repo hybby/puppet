@@ -27,7 +27,7 @@ variables:
 getting started with this module:
 ---------------------------------
 
-```puppet  
+```puppet
 include dns
 ```
 
@@ -38,11 +38,12 @@ any special usage info?
 if you want to override anything, you do  
 it like this:
 
+```puppet
 class {'dns': 
   nameservers => ['123.123.123.123',  
                   '213.213.213.213 ]
 }
-
+```
 
 any limitations i should know about?
 ------------------------------------
