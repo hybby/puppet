@@ -79,6 +79,44 @@ is that it?
   *   `puppet agent test` - should return all green and compile catalogues etc.
 
 
+careful with that bloody dns module of mine eh
+----------------------------------------------
+when i applied it, the agent decided to generate a new cert  
+for itself because my search domain had changed.  the server  
+thought it was `yalson.okayalright.co.uk` instead of its classic  
+`yalson`.  
+
+so i had two certs for one host and was a clever boy, deciding to:
+
+```bash
+rm -rf /var/lib/puppet/ssl
+```
+
+little did i know that is where the master certs lived too.  sigh
+
+regenerate them by
+
+```bash
+service httpd stop
+puppet master --no-daemonize --verbose
+```
+
+and stop the temporary master when it gets to the `notice: Starting  
+Puppet master version X.X.X` part.
+
+after that you will probably need to edit the certificate paths in  
+the httpd config around here: `/etc/httpd/conf.d/puppetmaster.conf`  
+
+after that:
+
+```bash
+service httpd start
+puppet cert list
+puppet cert sign 'yalson.okayalright.co.uk'
+puppet agent -t 
+```
+
+
 oh and here is some other fun stuff i did. 
 ------------------------------------------
 
