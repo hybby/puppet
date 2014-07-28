@@ -1,8 +1,8 @@
 {
-  "name": "drew-ssh",
+  "name": "drew-sshd",
   "version": "0.1.0",
   "author": "drew",
-  "summary": "configures ssh (client and server hopefully)",
+  "summary": "configures the sshd server"
   "license": "Apache 2.0",
   "source": "https://www.github.com/hybby",
   "project_page": "https://www.github.com/hybby",
