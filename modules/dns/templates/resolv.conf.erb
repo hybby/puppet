@@ -1,0 +1,4 @@
+# resolv.conf
+# this file is controlled by puppet
+search <%= scope['dns::searchdomains'] %>
+nameserver <%= scope['dns::nameservers'] %>

@@ -1,0 +1,17 @@
+{
+  "name": "drew-dns",
+  "version": "0.1.0",
+  "author": "drew",
+  "summary": "configures dns and controls resolv.conf ",
+  "license": "Apache 2.0",
+  "source": "https://www.github.com/hybby",
+  "project_page": "https://www.github.com/hybby",
+  "issues_url": "https://www.github.com/hybby/issues",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
