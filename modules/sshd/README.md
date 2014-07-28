@@ -27,10 +27,11 @@ variables:
 * `$sshd_config` - the path to the `sshd_config` file (default: `/etc/ssh/sshd_config`)  
 * `$ports` - an array of ports on which to listena (default: `22`, `22488`)  
 * `$permitrootlogin` - yes or no (default: `no`)  
-* `$displaymotd` - yes or no (default: `yes`)  
+* `$printmotd` - yes or no (default: `yes`)  
 * `$bannerfile` - where is the banner? (default: `/etc/issue.net`)  
 * `$allowusers` - who is allowed to log in? (default: `drew`)  
 * `$x11_forwarding` - yes or no (default: `yes`)  
+* `$printlastlog` - yes or no to 'last login from:' stuff (default: `no`)  
 
 
 getting started with this module:
