@@ -2,6 +2,7 @@
 
 node default {
   include dotfiles
+  include rootuser
   include motd
   include firewall
   include selinux
