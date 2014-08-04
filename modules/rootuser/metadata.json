@@ -1,0 +1,17 @@
+{
+  "name": "hybby-rootuser",
+  "version": "0.1.1",
+  "author": "hybby",
+  "summary": "this module replaces root's dotfiles to how i like 'em.",
+  "license": "Apache 2.0",
+  "source": "http://www.github.com/hybby",
+  "issues_url": "https://www.github.com/hybby/issues",
+  "project_page": "https://www.github.com/hybby",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.1",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
