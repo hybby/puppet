@@ -1,3 +1,4 @@
+#!/bin/bash
 # Requires bash, as it uses the [[ ]] syntax.
 #
 # If it's puppet code, lint it up.
