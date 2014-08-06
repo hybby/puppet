@@ -5,8 +5,6 @@
 # I we don't have puppet-lint, so just exit and leave them be.
 which puppet-lint >/dev/null 2>&1 || exit
 
-echo 'hello'
-
 # Variables goes hither
 declare -a FILES
 IFS="
