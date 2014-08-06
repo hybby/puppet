@@ -20,6 +20,7 @@ what this module affects:
 variables:
 ----------
   * `$resolv` - the full path of `resolv.conf`  
+  * `$domain` - the local domain name
   * `$nameservers` - nameservers to configure
   * `$searchdomains` - searchdomains to configure
 

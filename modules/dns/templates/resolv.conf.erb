@@ -1,4 +1,5 @@
 # resolv.conf
 # this file is controlled by puppet
-search <%= scope['dns::searchdomains'] %>
+domain <%= scope['dns::domain'] %>
+search <%- scope['dns::searchdomains'].each do |searchdomain| -%><%= searchdomain %> <% end %>
 nameserver <%= scope['dns::nameservers'] %>

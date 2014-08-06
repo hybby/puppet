@@ -9,32 +9,32 @@ class rootuser::config
     }
     file { $rootuser::homedir :
       ensure  => directory,
-      owner   => $rootuser::user,
-      group   => $rootuser::group,
+      owner   => 'root',
+      group   => 'root',
       mode    => '0700',
-      require => User[$rootuser::user],
+      require => User['root'],
     }
     file { $rootuser::bashrc :
       ensure  => file,
-      source  => "puppet:///modules/rootuser/${rootuser::user}/bashrc",
-      owner   => $rootuser::user,
-      group   => $rootuser::group,
+      source  => "puppet:///modules/rootuser/root/bashrc",
+      owner   => 'root',
+      group   => 'root',
       mode    => '0700',
       require => File[$rootuser::homedir],
     }
     file { $rootuser::bash_profile :
       ensure  => file,
-      source  => "puppet:///modules/rootuser/${rootuser::user}/bash_profile",
-      owner   => $rootuser::user,
-      group   => $rootuser::group,
+      source  => "puppet:///modules/rootuser/root/bash_profile",
+      owner   => 'root',
+      group   => 'root',
       mode    => '0700',
       require => File[$rootuser::homedir],
     }
     file { $rootuser::vimrc :
       ensure  => file,
-      source  => "puppet:///modules/rootuser/${rootuser::user}/vimrc",
-      owner   => $rootuser::user,
-      group   => $rootuser::group,
+      source  => "puppet:///modules/rootuser/root/vimrc",
+      owner   => 'root',
+      group   => 'root',
       mode    => '0600',
       require => File[$rootuser::homedir],
     }
